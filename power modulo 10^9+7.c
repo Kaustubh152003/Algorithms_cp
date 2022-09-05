@@ -5,10 +5,10 @@ long long power(long long x,long long a)
     else
     {
         long long p=power(x,a/2);
-        if(a%2==0)
         p=p*p;
-        else
-        p=p*p*x;
+        p=p%1000000007;
+        if(a%2==1)
+        p=p*x;
         p=p%1000000007;
         return p;
     }
