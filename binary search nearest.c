@@ -15,3 +15,22 @@ int* bs(int* arr,int n,int k) //returns position of element if found, else retur
         }
     }
 }
+
+int bsl(int* arr,int l,int r,int k) //returns the index of the element if present , else returns the element just lesse than it
+{
+    if(l<=r)
+    {
+        int m=(l+r)/2;
+        if(k==arr[m])
+        return m;
+        else
+        {
+            if(k<arr[m])
+            return bsl(arr,l,m-1,k);
+            else
+            return bsl(arr,m+1,r,k);
+        }
+    }
+    else
+    return r;
+}
