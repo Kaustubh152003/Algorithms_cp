@@ -92,3 +92,5 @@ void prime_factorize(int x,int* table,int sp) //sets the prime factorization int
             table[ptr-primes]++;
         }
 }
+
+//refer https://codeforces.com/contest/1823/submission/204409852
