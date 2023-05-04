@@ -52,3 +52,25 @@ int prime[100000];
         }
         k++;
     }
+
+
+void prime_factorize(int x,int* table,int sp) //sets the prime factorization into the array "table". needs primes and table to be initialized
+{
+    int count=0;
+        int j=0;
+        while(primes[j]!=-1 && primes[j]<=sqrt(x) && x>1)
+        {
+            if(x%primes[j]==0)
+            {
+                table[j]++;
+                x=x/primes[j];
+                j--;
+            }
+            j++;
+        }
+        if(x>1)
+        {
+            int* ptr=binary_search(primes,sp,x);
+            table[ptr-primes]++;
+        }
+}
