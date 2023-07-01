@@ -63,3 +63,21 @@ int bsr(int* arr,int l,int r,int k) //binary search which returns the right most
     else
     return -1;
 }
+int bsn(int* arr,int l,int r,int k)
+{
+    if(l<=r)
+    {
+        int m=(l+r)/2;
+        if(arr[m]==k)
+        return m;
+        else
+        {
+            if(k<arr[m])
+            return bsn(arr,l,m-1,k);
+            else
+            return bsn(arr,m+1,r,k);
+          }
+    }
+    else
+    return r;
+}
