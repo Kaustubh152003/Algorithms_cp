@@ -69,3 +69,9 @@ void func(int* arr,int p,int n)
         
     }
 }
+vector<vector<int>> nQueen(int n) 
+{
+    vector<vector<int>> ans;
+    func(0,0,n,ans);
+    return ans;
+}
