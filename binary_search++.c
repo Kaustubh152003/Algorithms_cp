@@ -25,9 +25,9 @@ int bs(int* arr,int l,int r,int k)
         else
         {
             if(k<arr[m])
-            return bsl(arr,l,m-1,k);
+            return bs(arr,l,m-1,k);
             else
-            return bsl(arr,m+1,r,k);
+            return bs(arr,m+1,r,k);
         }
     }
     else
